@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff
+}
+
+a.active {
+  color: #000;
+}
+
+a.active button {
+  font-weight: 700;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.logoImg {
+  width: 7rem
+}
