@@ -5,6 +5,7 @@ import MainLayout from '../containers/MainLayout'
 import Characters from '../components/Characters'
 import Episodes from '../components/Episodes'
 import Locations from '../components/Locations'
+import Favorites from '../components/Favorites'
 
 const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<MainLayout />} />
         <Route path="/characters" element={<Characters />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/episodes" element={<Episodes />} />
         <Route path="/locations" element={<Locations />} />
       </Routes>

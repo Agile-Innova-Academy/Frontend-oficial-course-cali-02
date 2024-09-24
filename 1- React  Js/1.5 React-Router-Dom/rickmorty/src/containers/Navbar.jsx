@@ -29,6 +29,9 @@ export default function Navbar() {
           <NavLink to='/characters'>
             <Button color="inherit">Characters</Button>
           </NavLink>
+          <NavLink to='/favorites'>
+            <Button color="inherit">Favorites</Button>
+          </NavLink>
           <NavLink to='/episodes'>
             <Button color="inherit">Episodes</Button>
           </NavLink>
