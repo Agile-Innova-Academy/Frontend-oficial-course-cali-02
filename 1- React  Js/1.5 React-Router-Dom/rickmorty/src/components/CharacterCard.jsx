@@ -10,7 +10,7 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp'
 import EditIcon from '@mui/icons-material/Edit'
 import { postData } from '../helpers/postData'
 import { favoritesAPIUrl } from '../constants/constants'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Box, Modal, TextField } from '@mui/material'
 import useForm from '../hooks/useForm'
 import { patchData } from '../helpers/patchData'
@@ -18,6 +18,8 @@ import Swal from 'sweetalert2'
 import { deleteData } from '../helpers/deleteData'
 
 export default function CharacterCard ({ data, setElementDeleted }) {
+const navigate = useNavigate()
+
   // Añadir favorito
   async function addFavorite () {
     await postData(favoritesAPIUrl, data)
@@ -80,6 +82,23 @@ export default function CharacterCard ({ data, setElementDeleted }) {
 
   return (
     <Card sx={{ width: 300 }}>
+      {/* Boton para probar el useParams Rutas dinamicas */}
+      <Button
+        variant='contained'
+        color={
+          data.status === 'Alive'
+            ? 'success'
+            : data.status === 'Dead'
+            ? 'error'
+            : 'secondary'
+        }
+        sx={{ position: 'absolute', margin: '1rem 13rem' }}
+        onClick={navigate(`/favorites${data[0].id}`)}
+      >
+        Ver una ruta dinamica
+      </Button>
+
+      {/* fin del boton */}
       <Button
         variant='contained'
         color={

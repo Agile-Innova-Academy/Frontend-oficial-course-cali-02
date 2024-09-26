@@ -3,11 +3,14 @@ import { favoritesAPIUrl } from '../constants/constants'
 import { Box, Grid2, Pagination, Paper, Stack, styled } from '@mui/material'
 import CharacterCard from './CharacterCard'
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
 const Favorites = () => {
   const [characters, setCharacters] = useState([])
   const [elementDeleted, setElementDeleted] = useState(false)
 
+  const {id} = useParams()
+  
   // Fetch favorites characters from API
   useEffect(() => {
     console.log(elementDeleted);

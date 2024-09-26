@@ -44,6 +44,7 @@ const Characters = () => {
       </Box>
       <Grid2 container spacing={2}>
         <Grid2 size={3}>
+        
           <Item>Filtros</Item>
         </Grid2>
         <Grid2

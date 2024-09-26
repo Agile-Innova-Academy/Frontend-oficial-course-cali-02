@@ -14,7 +14,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<MainLayout />} />
         <Route path="/characters" element={<Characters />} />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/favorites:id" element={<Favorites />} />
         <Route path="/episodes" element={<Episodes />} />
         <Route path="/locations" element={<Locations />} />
       </Routes>
