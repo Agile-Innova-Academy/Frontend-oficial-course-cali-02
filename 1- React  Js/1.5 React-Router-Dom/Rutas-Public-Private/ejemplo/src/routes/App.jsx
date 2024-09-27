@@ -3,11 +3,11 @@ import Login from "../Components/Login";
 import Register from "../Components/Register";
 import { AuthContext } from "../context/AuthContext";
 import { useReducer } from "react";
-
 import reducersUser from "../reducers/reducers/reducersUser";
 import PublicRouter from "./PublicRouter";
 import PrivateRouter from "./PrivateRouter";
-import DasboardRouter from "./DasboardRouter";
+import DashboardRouter from "./DashboardRouter";
+
 
 const init = () => {
   return { logged: false };
@@ -43,7 +43,7 @@ function App() {
             path="/*"
             element={
               <PrivateRouter>
-                <DasboardRouter />
+                <DashboardRouter/>
               </PrivateRouter>
             }
           />

@@ -11,6 +11,6 @@ export const actionLogin = (user) => {
 export const actionLogout = () => {
   console.log("Estoy en action logout");
   return {
-    type: typesUser.login,
+    type: typesUser.logout,
   };
 };
