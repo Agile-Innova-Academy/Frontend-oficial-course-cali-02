@@ -9,8 +9,7 @@ const Favorites = () => {
   const [characters, setCharacters] = useState([])
   const [elementDeleted, setElementDeleted] = useState(false)
 
-  const {id} = useParams()
-  
+ 
   // Fetch favorites characters from API
   useEffect(() => {
     console.log(elementDeleted);
